@@ -66,7 +66,8 @@ class Backbone:
     parts as dict collected in a list with order of appending
     '''
 
-    def __init__(self, ):
+    def __init__(self,name ):
+        self.name = name
         self.backbone = []
 
     def append_part(self, part):
@@ -74,10 +75,9 @@ class Backbone:
         
         '''
         self.backbone.append(part) 
-        return self.backbone
 
     def return_backbone(self):
-        return self.backbone
+        return [self.name, self.backbone]
 
     def print_backbone(self):
         '''
@@ -184,7 +184,6 @@ class Interaction:
     def print_interaction(self):
         print(self.interaction_dict)
 
-
 class InteractionNode:
 
 
@@ -202,9 +201,6 @@ class InteractionNode:
 
     def print_node(self):
         print(self.node_dict)
-
-	
-
 
 
 part1 = Part('Promoter1',1,'SO:2253254236',"Omar's Promoter")
@@ -224,13 +220,12 @@ part4_dict = part4.part_di()
 part5 = Part('Terminator',1,'SO:87265923869328567',"Tom's Terminator")
 part5_dict = part5.part_di()
 
-backbone1 = Backbone()
+backbone1 = Backbone(name="Backbone name")
 backbone1.append_part(part1_dict)
 backbone1.append_part(part2_dict)
 backbone1.append_part(part3_dict)
 backbone1.append_part(part4_dict)
 backbone1.append_part(part5_dict)
-
 
 
 node1 = InteractionNode('dissociation', 'SO:1858478', 'First Interaction Node')
