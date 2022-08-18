@@ -1,8 +1,7 @@
-
-
 class BioDesign:
-
-
+    '''
+    
+    '''
 
     def __init__(self, name):
         self.name = name
@@ -10,7 +9,6 @@ class BioDesign:
         self.molecular_species = []
         self.interaction_node = []
         self.interaction = []
-
 
 
     def add_backbone(self, backbone):
