@@ -64,7 +64,7 @@ class Backbone:
     parts as dict collected in a list with order of appending
     '''
 
-    def __init__(self,name ):
+    def __init__(self,name = "Backbone Init"):
         self.name = name
         self.backbone = []
 
@@ -75,14 +75,14 @@ class Backbone:
         self.backbone.append(part) 
 
     def return_backbone(self):
-        return [self.name, self.backbone]
+        return_list = [self.name, self.backbone]
+        return return_list
 
     def print_backbone(self):
         '''
         
         '''
         print(self.backbone)
-
 
 class Part:
     '''
@@ -152,7 +152,7 @@ class MolecularSpecies:
         self.name = name
         self.species = {}
         
-    def molec_spec(self):
+    def molec_spec_append(self):
         self.species['molecular_species_type'] = self.molecular_species_type
         self.species['so_term'] = self.so_term
         self.species['name'] = self.name
@@ -172,7 +172,7 @@ class Interaction:
         self.interaction_dict = {}
 
         
-    def interaction(self):
+    def interaction_append(self):
         self.interaction_dict['interaction_type'] = self.interaction_type
         self.interaction_dict['start_object'] = self.start_object
         self.interaction_dict['end_object'] = self.end_object
