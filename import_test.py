@@ -1,4 +1,4 @@
-from DNAplotlib2.dnaplotlib2 import Backbone, Part
+from dnaplotlib2.dnaplotlib2 import Backbone, Part
 
 def test_backbone_append():
     part2 = Part('p','1','123','q')

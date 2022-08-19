@@ -57,9 +57,14 @@ class Part:
         
         return self.part_dict
     
-part1 = Part('Promoter',1,'SO:432436','Ahmed')
-output1 = part1.part_li()
-output2 = part1.part_di()
-print(output1, output2)
-    
-    
+# part1 = Part('Promoter',1,'SO:432436','Ahmed')
+# output1 = part1.part_li()
+# output2 = part1.part_di()
+# print(output1, output2)
+
+# import unittest
+
+# class TestPart(unittest.TestCase):
+#     def test_part(self):
+#         part_test = Part('Promoter',1,'SO:432436','Ahmed')
+#         self.assertEqual(part_test.part_li(), output1) 

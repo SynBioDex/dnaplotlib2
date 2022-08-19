@@ -1,7 +1,6 @@
 class Part:
     '''
     
-    
     '''
     def __init__(self, part_type, orientation, so_term, name):
         self.part_type = part_type
@@ -65,7 +64,8 @@ class Backbone:
     parts as dict collected in a list with order of appending
     '''
 
-    def __init__(self, ):
+    def __init__(self, name):
+        self.name = name
         self.backbone = []
 
     def append_part(self, part):
@@ -76,7 +76,7 @@ class Backbone:
         return self.backbone
 
     def return_backbone(self):
-        return self.backbone
+        return [self.name, self.backbone]
 
     def print_backbone(self):
         '''
@@ -108,5 +108,3 @@ backbone1.append_part(part3_dict)
 backbone1.append_part(part4_dict)
 backbone1.append_part(part5_dict)
 backbone1.print_backbone()
-
-
