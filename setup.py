@@ -1,8 +1,9 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='DNAplotlib2',
-    version='0.2.0',
-    packages=find_packages(include=['dnaplotlib2', 'dnaplotlib2.*']),
-    tests_require=['pytest'],
+    version='2.0',
+    description = 'Genetic design visualization',
+    packages= ['dnaplotlib2', 'dnaplotlib2.*'],
+    tests_require = ['pytest']
 )
