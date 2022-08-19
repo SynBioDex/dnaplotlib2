@@ -5,5 +5,5 @@ setup(
     version='2.0',
     description = 'Genetic design visualization',
     packages= ['dnaplotlib2', 'dnaplotlib2.*'],
-    tests_require = ['pytest']
+    tests_require = ['pytest'] 
 )
