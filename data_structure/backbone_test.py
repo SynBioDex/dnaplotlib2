@@ -1,7 +1,7 @@
 # import sys
 # sys.path.append("../DNAplotlib2")
 
-from DNAplotlib2.dnaplotlib2 import Backbone, Part
+from dnaplotlib2 import Backbone, Part
 
 def test_backbone_append():
     part1 = Part('p','1','123','q')
@@ -11,3 +11,5 @@ def test_backbone_append():
     # backbone2 = Backbone(name='test2')
     # backbone2.append_part(Part('a',1,'12233','qee'))
     assert backbone1.return_backbone() == ['test1', [['p','1','123','q']]]
+
+
