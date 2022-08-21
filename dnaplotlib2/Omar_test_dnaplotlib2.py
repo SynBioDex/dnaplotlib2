@@ -105,8 +105,8 @@ print('\n Bio1 \n\n')
 # Bio1.add_interaction_node("Node2")
 # Bio1.add_interaction("Interaction2")
 
-Bio1.print_biodesign()
-
+# Bio1.print_biodesign()
+print(Bio1.return_biodesign())
 # Bio1.print_backbone()
 # Bio1.print_node()
 # Bio1.print_interaction()

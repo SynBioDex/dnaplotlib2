@@ -58,6 +58,19 @@ class BioDesign:
             f"Nodes are -> {self.return_node()}\n\n",
             f"Interactions are -> {self.return_interaction()}")
 
+    # def return_biodesign(self):
+    #     self.biodesign_output = [f"Name of BioDesign is -> {self.name}","\n\n",
+    #         f"Backbones are -> {self.return_backbone()}\n\n",
+    #         f"Species are -> {self.return_moleculer()}\n\n",
+    #         f"Nodes are -> {self.return_node()}\n\n",
+    #         f"Interactions are -> {self.return_interaction()}"]
+    #     return self.biodesign_output
+    
+    def return_biodesign(self):
+        self.biodesign_output = [self.name, self.return_backbone(), self.return_moleculer(), self.return_node(),self.return_interaction()]
+        return self.biodesign_output
+
+
 class Backbone:
     '''
     list of dict 
