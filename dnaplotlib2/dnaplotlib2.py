@@ -1,8 +1,8 @@
 class BioDesign:
-    """
+    '''
     Class for collecting and printting all Bio Design components like Backbones, Molecular Species 
     and Interactions
-    """
+    '''
 
     def __init__(self, name):
         self.name = name
@@ -271,6 +271,10 @@ class Interaction:
 
 
 class InteractionNode:
+    '''
+    class to create new list of interaction nodes 
+    '''
+
     def __init__(self, interaction_node_type, so_term, name):
         self.interaction_node_type = interaction_node_type
         self.so_term = so_term
@@ -278,10 +282,17 @@ class InteractionNode:
         self.inter_node_dict = {}
 
     def node_dict(self):
+        '''
+        function to create a dictionary of interaction node components
+        '''
+
         self.inter_node_dict["interaction_node_type"] = self.interaction_node_type
         self.inter_node_dict["so_term"] = self.so_term
         self.inter_node_dict["name"] = self.name
         return self.inter_node_dict
 
     def print_node(self):
+        '''
+        function to print list of interaction nodes
+        '''
         print(self.node_dict)
