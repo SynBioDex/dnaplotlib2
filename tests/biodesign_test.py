@@ -1,3 +1,7 @@
+'''
+test case to for biodesign 
+'''
+
 import dnaplotlib2 as dpl
 
 def test_biodesign():
