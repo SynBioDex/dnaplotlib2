@@ -3,7 +3,6 @@ class BioDesign:
     Class for collecting and printting all Bio Design components like Backbones, Molecular Species 
     and Interactions
     '''
-
     def __init__(self, name):
         self.name = name
         self.backbone = []
@@ -11,6 +10,17 @@ class BioDesign:
         self.interaction_node = []
         self.interaction = []
         self.biodesign_output = []
+
+    def __repr__(self):
+        '''return a string representation of the object'''
+        self.biodesign_output = [
+            self.name,
+            self.return_backbone(),
+            self.return_moleculer(),
+            self.return_node(),
+            self.return_interaction(),]
+            
+        return self.biodesign_output
 
     def add_backbone(self, backbone):
         '''
@@ -105,18 +115,18 @@ class BioDesign:
     #         f"Interactions are -> {self.return_interaction()}"]
     #     return self.biodesign_output
 
-    def return_biodesign(self):
-        '''
-        function to return current biodesign
-        '''
-        self.biodesign_output = [
-            self.name,
-            self.return_backbone(),
-            self.return_moleculer(),
-            self.return_node(),
-            self.return_interaction(),
-        ]
-        return self.biodesign_output
+    # def return_biodesign(self):
+    #     '''
+    #     function to return current biodesign
+    #     '''
+    #     # self.biodesign_output = [
+        #     self.name,
+        #     self.return_backbone(),
+        #     self.return_moleculer(),
+        #     self.return_node(),
+        #     self.return_interaction(),
+        # ]
+        # return self.biodesign_output
 
 
 class Backbone:
@@ -128,19 +138,26 @@ class Backbone:
     def __init__(self, name="Backbone Init"):
         self.name = name
         self.backbone = []
+        self.backbone_list = []
+
+    def __repr__(self):
+        '''return a string representation of the object'''
+        self.backbone_list = [self.name, self.backbone]
+        return f'(Backbone object contains {self.backbone_list})'
 
     def append_part(self, part):
-        """ 
+        '''
         function to append new part to the backbone
-        """
+        '''
         self.backbone.append(part)
-
-    def return_backbone(self):
-        '''
-        function to return current backbone as a list of all parts appended
-        '''
-        return_list = [self.name, self.backbone]
-        return return_list
+        
+    
+    # def return_backbone(self):
+    #     '''
+    #     function to return current backbone as a list of all parts appended
+    #     '''
+    #     return_list = [self.name, self.backbone]
+    #     return return_list
 
     def print_backbone(self):
         """ 
@@ -223,6 +240,11 @@ class MolecularSpecies:
         self.name = name
         self.species = {}
 
+    def __repr__(self):
+        '''return a string representation of the object'''
+        return f'(Molecule object contains {self.species})'
+
+
     def molec_spec_append(self):
         '''
         function to add new molecule to a list of all molecules
@@ -230,7 +252,7 @@ class MolecularSpecies:
         self.species["molecular_species_type"] = self.molecular_species_type
         self.species["so_term"] = self.so_term
         self.species["name"] = self.name
-        return self.species
+        # return self.species
 
     def print_spec(self):
         '''
@@ -251,6 +273,11 @@ class Interaction:
         self.name = name
         self.interaction_dict = {}
 
+    def __repr__(self):
+        '''return a string representation of the object'''
+        return f'(Interaction object contains {self.interaction_dict})'
+
+
     def interaction_append(self):
         '''
         function to append new interaction to the interaction list
@@ -260,7 +287,7 @@ class Interaction:
         self.interaction_dict["start_object"] = self.start_object
         self.interaction_dict["end_object"] = self.end_object
         self.interaction_dict["name"] = self.name
-        return self.interaction_dict
+        # return self.interaction_dict
 
     def print_interaction(self):
         '''
@@ -281,6 +308,11 @@ class InteractionNode:
         self.name = name
         self.inter_node_dict = {}
 
+    def __repr__(self):
+        '''return a string representation of the object'''
+        return f'(Node object contains {self.inter_node_dict})'
+
+
     def node_dict(self):
         '''
         function to create a dictionary of interaction node components
@@ -289,7 +321,7 @@ class InteractionNode:
         self.inter_node_dict["interaction_node_type"] = self.interaction_node_type
         self.inter_node_dict["so_term"] = self.so_term
         self.inter_node_dict["name"] = self.name
-        return self.inter_node_dict
+        # return self.inter_node_dict
 
     def print_node(self):
         '''
