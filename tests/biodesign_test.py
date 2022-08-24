@@ -5,6 +5,9 @@ test case to for biodesign
 import dnaplotlib2 as dpl
 
 def test_biodesign():
+    '''
+    funtion to test return of biodesign and make sure every element have been added
+    '''
 
     bio_1 =  dpl.BioDesign('First BioDesign')
     bio_1.add_backbone('Backbone1')
