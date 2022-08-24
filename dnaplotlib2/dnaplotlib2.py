@@ -3,6 +3,7 @@ class BioDesign:
     Class for collecting and printting all Bio Design components like Backbones, Molecular Species 
     and Interactions
     '''
+    
     def __init__(self, name):
         self.name = name
         self.backbone = []
@@ -19,7 +20,7 @@ class BioDesign:
             self.return_moleculer(),
             self.return_node(),
             self.return_interaction(),]
-            
+
         return self.biodesign_output
 
     def add_backbone(self, backbone):
@@ -94,6 +95,29 @@ class BioDesign:
         '''
         return self.interaction
 
+        # def return_biodesign(self):
+        #     self.biodesign_output = [f"Name of BioDesign is -> {self.name}","\n\n",
+        #         f"Backbones are -> {self.return_backbone()}\n\n",
+        #         f"Species are -> {self.return_moleculer()}\n\n",
+        #         f"Nodes are -> {self.return_node()}\n\n",
+        #         f"Interactions are -> {self.return_interaction()}"]
+        #     return self.biodesign_output
+
+        # def return_biodesign(self):
+        #     '''
+        #     function to return current biodesign
+        #     '''
+        #     # self.biodesign_output = [
+            #     self.name,
+            #     self.return_backbone(),
+            #     self.return_moleculer(),
+            #     self.return_node(),
+            #     self.return_interaction(),
+            # ]
+            # return self.biodesign_output
+
+
+
     def print_biodesign(self):
         '''
         function to print all biodesign components
@@ -104,36 +128,14 @@ class BioDesign:
             f"Backbones are -> {self.return_backbone()}\n\n",
             f"Species are -> {self.return_moleculer()}\n\n",
             f"Nodes are -> {self.return_node()}\n\n",
-            f"Interactions are -> {self.return_interaction()}",
-        )
-
-    # def return_biodesign(self):
-    #     self.biodesign_output = [f"Name of BioDesign is -> {self.name}","\n\n",
-    #         f"Backbones are -> {self.return_backbone()}\n\n",
-    #         f"Species are -> {self.return_moleculer()}\n\n",
-    #         f"Nodes are -> {self.return_node()}\n\n",
-    #         f"Interactions are -> {self.return_interaction()}"]
-    #     return self.biodesign_output
-
-    # def return_biodesign(self):
-    #     '''
-    #     function to return current biodesign
-    #     '''
-    #     # self.biodesign_output = [
-        #     self.name,
-        #     self.return_backbone(),
-        #     self.return_moleculer(),
-        #     self.return_node(),
-        #     self.return_interaction(),
-        # ]
-        # return self.biodesign_output
+            f"Interactions are -> {self.return_interaction()}",)
 
 
 class Backbone:
-    """
+    '''
     class to create backbone through adding different parts
     output:  list of dict of added parts
-    """
+    '''
 
     def __init__(self, name="Backbone Init"):
         self.name = name
