@@ -3,7 +3,7 @@ class BioDesign:
     Class for collecting and printting all Bio Design components like Backbones, Molecular Species 
     and Interactions
     '''
-    
+
     def __init__(self, name):
         self.name = name
         self.backbone = []
@@ -21,7 +21,7 @@ class BioDesign:
             self.return_node(),
             self.return_interaction(),]
 
-        return self.biodesign_output
+        return f'{self.biodesign_output}'
 
     def add_backbone(self, backbone):
         '''
@@ -95,14 +95,7 @@ class BioDesign:
         '''
         return self.interaction
 
-        # def return_biodesign(self):
-        #     self.biodesign_output = [f"Name of BioDesign is -> {self.name}","\n\n",
-        #         f"Backbones are -> {self.return_backbone()}\n\n",
-        #         f"Species are -> {self.return_moleculer()}\n\n",
-        #         f"Nodes are -> {self.return_node()}\n\n",
-        #         f"Interactions are -> {self.return_interaction()}"]
-        #     return self.biodesign_output
-
+        
         # def return_biodesign(self):
         #     '''
         #     function to return current biodesign
@@ -145,7 +138,14 @@ class Backbone:
     def __repr__(self):
         '''return a string representation of the object'''
         self.backbone_list = [self.name, self.backbone]
-        return f'(Backbone object contains {self.backbone_list})'
+        # return f'(Backbone object contains {self.backbone_list})'
+        return f'"{self.backbone_list}"'
+
+    # def __str__(self):
+    #     '''return a string representation of the object'''
+    #     self.backbone_list = [self.name, self.backbone]
+    #     # return f'(Backbone object contains {self.backbone_list})'
+    #     return f'{self.backbone_list}'
 
     def append_part(self, part):
         '''
@@ -153,7 +153,6 @@ class Backbone:
         '''
         self.backbone.append(part)
         
-    
     # def return_backbone(self):
     #     '''
     #     function to return current backbone as a list of all parts appended
@@ -330,3 +329,9 @@ class InteractionNode:
         function to print list of interaction nodes
         '''
         print(self.node_dict)
+
+class Renderer:
+    ''' This class will render biological glyphs and plot them into matplotlib figure'''
+
+    def bio_render(self, biodesign):
+        self.biodesign = biodesign
