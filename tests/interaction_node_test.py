@@ -7,6 +7,6 @@ def test_interaction_node():
     '''
     function to test append function of interaction node
     '''
-    
     node_1 = dpl.InteractionNode('direct', 'SO:5555', 'First InteractionNode')
-    assert node_1.node_dict() == {'interaction_node_type' : 'direct', 'so_term': 'SO:5555', 'name' : 'First InteractionNode'}
+    node_1.node_dict()
+    assert node_1.inter_node_dict == {'interaction_node_type' : 'direct', 'so_term': 'SO:5555', 'name' : 'First InteractionNode'}
