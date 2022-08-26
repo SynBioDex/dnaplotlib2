@@ -30,6 +30,8 @@ backbone1.append_part(b1_part3_dict)
 backbone1.append_part(b1_part4_dict)
 backbone1.append_part(b1_part5_dict)
 
+# print(str(backbone1))
+
 ## Second Backbone
 b2_part1 = dpl.Part("b2_Promoter1", 1, "SO:2253254236", "Omar's Promoter")
 b2_part1_dict = b2_part1.part_di()
@@ -87,18 +89,18 @@ inter4.interaction_append()
 ##################################################
 
 Bio1 = dpl.BioDesign("First BioDesign")
-Bio1.add_backbone(backbone1.return_backbone())
-Bio1.add_backbone(backbone2.return_backbone())
+Bio1.add_backbone(backbone1.backbone_list)
+Bio1.add_backbone(backbone2.backbone_list)
 
-Bio1.add_moleculer(mo1.molec_spec_append())
-Bio1.add_moleculer(mo2.molec_spec_append())
+Bio1.add_moleculer(mo1.species)
+Bio1.add_moleculer(mo2.species)
 
-Bio1.add_interaction_node(node1.node_dict())
+Bio1.add_interaction_node(node1.inter_node_dict)
 
-Bio1.add_interaction(inter1.interaction_append())
-Bio1.add_interaction(inter2.interaction_append())
-Bio1.add_interaction(inter3.interaction_append())
-Bio1.add_interaction(inter4.interaction_append())
+Bio1.add_interaction(inter1.interaction_dict)
+Bio1.add_interaction(inter2.interaction_dict)
+Bio1.add_interaction(inter3.interaction_dict)
+Bio1.add_interaction(inter4.interaction_dict)
 
 
 print("\n Bio1 \n\n")
@@ -109,7 +111,8 @@ print("\n Bio1 \n\n")
 # Bio1.add_interaction("Interaction2")
 
 # Bio1.print_biodesign()
-print(Bio1.return_biodesign())
+Bio1.show_biodesign()
+print(Bio1.biodesign_output)
 # Bio1.print_backbone()
 # Bio1.print_node()
 # Bio1.print_interaction()
