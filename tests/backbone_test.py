@@ -12,4 +12,4 @@ def test_backbone_append():
     backbone1 = dpl.Backbone(name='test1')
     backbone1.append_part(part1.part_li())
     output = ['test1', [['p','1','123','q']]]
-    assert backbone1.backbone_list == output
+    assert backbone1.backbones_list == output

@@ -58,10 +58,10 @@ Bio1 = dpl.BioDesign("First BioDesign")
 Bio1.add_backbone(backbone1.backbones)
 Bio1.add_backbone(backbone2.backbones)
 
-draw_dpl = dpl.Renderer().bio_render(Bio1)
+# draw_dpl = dpl.Renderer().bio_render(Bio1)
 
 
-
+draw_constract = dpl.Renderer().draw_construct(Bio1.backbones)
 # # Set Bounds
 # ax.set_ylim([0,100])
 # ax.set_xlim([0,100])

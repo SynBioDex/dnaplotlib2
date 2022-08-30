@@ -112,7 +112,7 @@ class Backbone:
     def __init__(self, name="Backbone Init"):
         self.name = name
         self.backbones = []
-        self.backbones_list = []
+        self.backbones_list = [self.name]
 
     def __repr__(self):
         """return a string representation of the object"""
@@ -126,7 +126,7 @@ class Backbone:
         function to append new part to the backbone
         """
         self.backbones.append(part)
-        self.backbones_list = [self.name, self.backbones]
+        self.backbones_list.append(self.backbones)
 
     
     def print_backbone(self):
@@ -333,4 +333,13 @@ class Renderer:
 
         plt.show()
 
+    def draw_construct(self, part_list):
+        import parasbolv as psv
+        import matplotlib.pyplot as plt
+
+        # Draw construct
+        construct = psv.Construct(part_list, self.renderer)
+        fig, ax, baseline_start, baseline_end, bounds = construct.draw()
+        ax.plot([baseline_start[0], baseline_end[0]], [baseline_start[1], baseline_end[1]], color=(0,0,0), linewidth=1.5, zorder=0)
+        plt.show()
 
