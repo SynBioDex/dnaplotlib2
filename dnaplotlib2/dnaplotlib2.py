@@ -6,7 +6,7 @@ class BioDesign:
 
     def __init__(self, name):
         self.name = name
-        self.backbone = []
+        self.backbones = []
         self.molecular_species = []
         self.interaction_node = []
         self.interaction = []
@@ -16,7 +16,7 @@ class BioDesign:
         """return a string representation of the object"""
         self.biodesign_output = [
             self.name,
-            self.backbone,
+            self.backbones,
             self.molecular_species,
             self.interaction_node,
             self.interaction,
@@ -24,17 +24,17 @@ class BioDesign:
 
         return f"{self.biodesign_output}"
 
-    def add_backbone(self, backbone):
+    def add_backbone(self, backbones):
         """
         function to append backbones to a list in a biodesign
         """
-        self.backbone.append(backbone)
+        self.backbones.append(backbones)
 
     def print_backbone(self):
         """
         function to print to a list of available backbones
         """
-        print(self.backbone)
+        print(self.backbones)
 
 
     def add_moleculer(self, moleculer):
@@ -82,7 +82,7 @@ class BioDesign:
         '''
         self.biodesign_output = [
         self.name,
-        self.backbone,
+        self.backbones,
         self.molecular_species,
         self.interaction_node,
         self.interaction,
@@ -96,7 +96,7 @@ class BioDesign:
         print(
             f"Name of BioDesign is -> {self.name}",
             "\n\n",
-            f"Backbones are -> {self.backbone}\n\n",
+            f"Backbones are -> {self.backbones}\n\n",
             f"Species are -> {self.molecular_species}\n\n",
             f"Nodes are -> {self.interaction_node}\n\n",
             f"Interactions are -> {self.interaction}",
@@ -111,29 +111,29 @@ class Backbone:
 
     def __init__(self, name="Backbone Init"):
         self.name = name
-        self.backbone = []
-        self.backbone_list = []
+        self.backbones = []
+        self.backbones_list = [self.name]
 
     def __repr__(self):
         """return a string representation of the object"""
-        self.backbone_list = [self.name, self.backbone]
+        self.backbones_list = [self.name, self.backbones]
         # return f'(Backbone object contains {self.backbone_list})'
-        return f"{self.backbone_list}"
+        return f"{self.backbones_list}"
 
 
     def append_part(self, part):
         """
         function to append new part to the backbone
         """
-        self.backbone.append(part)
-        self.backbone_list = [self.name, self.backbone]
+        self.backbones.append(part)
+        self.backbones_list.append(self.backbones)
 
     
     def print_backbone(self):
         """
         function to print current backbone parts
         """
-        print(self.backbone)
+        print(self.backbones)
 
 
 class Part:
@@ -296,13 +296,50 @@ class InteractionNode:
 
 class Renderer:
     """This class will render biological glyphs and plot them into matplotlib figure"""
+    
+    def __init__(self):
+        import parasbolv as psv
+
+        self.renderer = psv.GlyphRenderer()
+        self.biodesign = []
+    
 
     def bio_render(self, biodesign):
         """
         This function take biodesign as input and plot it using matplotlib
         """
 
+        import matplotlib.pyplot as plt
+
+        # Generate Matplotlib Figure and Axes
+        fig = plt.figure(figsize=(6,6))
+        ax = fig.add_axes([0.0, 0.0, 1.0, 1.0], frameon=False, aspect=1)
+
         self.biodesign = biodesign
         
+        y = 50
+        for b in self.biodesign.backbones:
+            x = 10
+            for part in b:
+                
+                bounds, end_point = self.renderer.draw_glyph(ax, part['part_type'], (x, y))
+                x = x + 20
+                # y = y + 20
+            y = y + 30
+        
+        # Set Bounds
+        ax.set_ylim([0,100])
+        ax.set_xlim([0,200])
 
+        plt.show()
+
+    def draw_construct(self, part_list):
+        import parasbolv as psv
+        import matplotlib.pyplot as plt
+
+        # Draw construct
+        construct = psv.Construct(part_list, self.renderer)
+        fig, ax, baseline_start, baseline_end, bounds = construct.draw()
+        ax.plot([baseline_start[0], baseline_end[0]], [baseline_start[1], baseline_end[1]], color=(0,0,0), linewidth=1.5, zorder=0)
+        plt.show()
 

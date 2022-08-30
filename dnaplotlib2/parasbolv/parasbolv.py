@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import matplotlib.font_manager as font_manager
 from matplotlib.path import Path
-from parasbolv.svgpath2mpl import parse_path
+from svgpath2mpl import parse_path
 
 
 __author__ = "Thomas E. Gorochowski <tom@chofski.co.uk>, \
