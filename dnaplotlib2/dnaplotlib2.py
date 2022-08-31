@@ -371,6 +371,4 @@ class Renderer:
         plt.show()
 
 
-        def draw_construct(self, biodesign, part_list):
-
-
+        # def draw_construct(self, biodesign, part_list):
