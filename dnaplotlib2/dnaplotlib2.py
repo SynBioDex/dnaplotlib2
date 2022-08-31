@@ -302,7 +302,9 @@ class Renderer:
 
         self.renderer = psv.GlyphRenderer()
         self.biodesign = []
-    
+        self.part_dict = {}
+        self.part_list = []
+
 
     def bio_render(self, biodesign):
         """
@@ -333,13 +335,42 @@ class Renderer:
 
         plt.show()
 
-    def draw_construct(self, part_list):
+    def draw_construct(self, biodesign, part_list):
         import parasbolv as psv
         import matplotlib.pyplot as plt
 
         # Draw construct
-        construct = psv.Construct(part_list, self.renderer)
+        self.biodesign = biodesign
+        self.part_list = part_list
+
+        i = 0
+
+        for b in self.biodesign.backbones:
+
+            for part in b:
+                self.part_list.append(list(part.values()))
+
+            self.part_dict[i] = self.part_list
+            i = i + 1
+            
+            # print(self.part_list)
+            self.part_list = []
+            # print(self.part_list)
+
+            
+        construct = psv.Construct(self.part_dict[0], self.renderer)
+        
         fig, ax, baseline_start, baseline_end, bounds = construct.draw()
         ax.plot([baseline_start[0], baseline_end[0]], [baseline_start[1], baseline_end[1]], color=(0,0,0), linewidth=1.5, zorder=0)
+
+        construct2 = psv.Construct(self.part_dict[1], self.renderer, fig=fig, ax=ax, start_position=(0,50), additional_bounds_list=[bounds])
+        construct2.update_bounds()
+        fig, ax, baseline_start, baseline_end, bounds = construct2.draw()
+        ax.plot([baseline_start[0], baseline_end[0]], [baseline_start[1], baseline_end[1]], color=(0,0,0), linewidth=1.5, zorder=0)
+
         plt.show()
+
+
+        def draw_construct(self, biodesign, part_list):
+
 
