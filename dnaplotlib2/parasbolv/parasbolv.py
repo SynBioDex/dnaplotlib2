@@ -917,6 +917,9 @@ def render_part_list(
             )
         bounds_list.append(bounds)
     interaction_bounds_list = []
+            
+    print('parasbolv interactionlist not none')                                          # added by omar
+
     if interaction_list is not None:
         interaction_types = [
             "control",
@@ -925,12 +928,22 @@ def render_part_list(
             "process",
             "stimulation",
         ]
+        
+        print('parasbolv interaction not in interaction_list')                                          # added by omar
+
         for interaction in interaction_list:
+            print('parasbolv interaction in interaction_list')                                          # added by omar
             if interaction[2] in interaction_types:
                 # Find bounds of glyphs
                 n = 0
                 for part in part_list:
+
+                    print('parasbolv part in part_list', part)
+                    print('parasbolv interaction[0]', interaction[0])
+                    
+                    
                     if part is interaction[0]:
+                    
                         sending_bounds = bounds_list[n]
                         break
                     n += 1

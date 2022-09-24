@@ -384,6 +384,9 @@ class Renderer:
             print('interaction_list -> ',interaction_list)
             print('self.interaction_dict - >  ', self.interaction_dict)
 
+
+        # todo- create a loop to draw a list of backbones
+
         construct = psv.Construct(self.part_dict[0], self.renderer, interaction_list=self.interaction_dict[0]) 
         
         fig, ax, baseline_start, baseline_end, bounds = construct.draw()

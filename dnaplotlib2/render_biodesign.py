@@ -58,6 +58,7 @@ b2_part2 = dpl.Part("Recombination Site", "forward", None, None)
 b2_part2_dict = b2_part2.part_di()
 # print(part3_dict)
 
+
 b2_part3 = dpl.Part("Terminator", "forward", None, None)
 b2_part3_dict = b2_part3.part_di()
 
