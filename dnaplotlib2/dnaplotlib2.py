@@ -317,13 +317,22 @@ class Renderer:
         fig = plt.figure(figsize=(6,6))
         ax = fig.add_axes([0.0, 0.0, 1.0, 1.0], frameon=False, aspect=1)
 
+
         self.biodesign = biodesign
         
         y = 50
         for b in self.biodesign.backbones:
             x = 10
+            print(f'Omar check this backbone {type(b)}')
+            print(f'Omar check this backbone {b}')
+
+            # b_list = list(b)
+
+            # print(f'Omar check this backbone {type(b)}')
+            # print(f'Omar check this backbone {b}')
+
             for part in b:
-                
+                print(f'omar part {part}')
                 bounds, end_point = self.renderer.draw_glyph(ax, part['part_type'], (x, y))
                 x = x + 20
                 # y = y + 20
