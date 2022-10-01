@@ -10,7 +10,7 @@ for object in doc.objects:
     print(object.display_name)
     objects_list.append(object.display_name)
     backbone1 = dpl.Backbone(name=object.display_name)
-    # print(object.features)
+    print(object.features)
     print(i)
     # for seq in object.features:
     #     # print(seq)
