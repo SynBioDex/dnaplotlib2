@@ -148,6 +148,8 @@ class Part:
         self.name = name
         self.part_list = []
         self.part_dict = {}
+        self.start_point = (0, 0)
+        
 
     def part_li(self):
         """
@@ -170,6 +172,9 @@ class Part:
         self.part_list.append(self.orientation)
         self.part_list.append(self.so_term)
         self.part_list.append(self.name)
+
+        self.part_list.append(self.start_point)
+
         # print(self.part_list)
 
         return self.part_list
@@ -194,6 +199,8 @@ class Part:
         self.part_dict["orientation"] = self.orientation
         self.part_dict["so_term"] = self.so_term
         self.part_dict["name"] = self.name
+
+        self.part_dict['end_point'] = self.start_point
         # print(self.part_dict)
 
         return self.part_dict
@@ -304,8 +311,7 @@ class Renderer:
         self.biodesign = []
         self.part_dict = {}
         self.part_list = []
-
-
+        " use this from paraSBOLv glyph_term_map inst"
     def bio_render(self, biodesign):
         """
         This function take biodesign as input and plot it using matplotlib
@@ -316,27 +322,32 @@ class Renderer:
         # Generate Matplotlib Figure and Axes
         fig = plt.figure(figsize=(6,6))
         ax = fig.add_axes([0.0, 0.0, 1.0, 1.0], frameon=False, aspect=1)
-
+        start_point = (10,30)
 
         self.biodesign = biodesign
+
         
-        y = 50
         for b in self.biodesign.backbones:
-            x = 10
-            print(f'Omar check this backbone {type(b)}')
-            print(f'Omar check this backbone {b}')
+            
+            # print(f'Omar check this backbone {type(b)}')
+            # print(f'Omar check this backbone {b}')
 
             # b_list = list(b)
 
             # print(f'Omar check this backbone {type(b)}')
             # print(f'Omar check this backbone {b}')
+            
 
             for part in b:
                 print(f'omar part {part}')
-                bounds, end_point = self.renderer.draw_glyph(ax, part['part_type'], (x, y))
-                x = x + 20
+                part['start_point'] = start_point
+                bounds, end_point = self.renderer.draw_glyph(ax, part['part_type'], position=part['start_point'])
+                start_point = end_point
+
+                print(f'bounds = {bounds} \n end_point = {end_point}')
+                # x = x + 20
                 # y = y + 20
-            y = y + 30
+            # y = y + 30
         
         # Set Bounds
         ax.set_ylim([0,100])
