@@ -2,7 +2,7 @@ import dnaplotlib2 as dpl
 import sbol3
 
 doc = sbol3.Document()
-doc.read("pysbol3_files/distribution.nt")
+doc.read("gfp.nt")
 
 # # SO_to_glyph_type = {'0000031': 'Aptamer', 
 #                     '0001953':'Assembly Scar', 
@@ -68,42 +68,49 @@ backbone_list = []
 glyph_type = ''
 
 for object in doc.objects:
-    # print(object.display_name)
-    objects_list.append(object.display_name)
-    backbone1 = dpl.Backbone(name=object.display_name)
+    # if not isinstance(object, sbol3.Component):
+    #     continue
+    print(object.display_name , i)
+    # objects_list.append(object.display_name)
+    # backbone1 = dpl.Backbone(name=object.display_name)
+    
+    # for feature in object.features:
+    #     print(f"Name: {feature.name}, roles: {feature.roles}, orientation: {feature.orientation}")
+    #     print(object.display_name , i)
 
-    for feature in object.features:
-        # print(f"Name: {feature.name}, roles: {feature.roles}, orientation: {feature.orientation}")
-        SO_term = feature.roles[0][feature.roles[0].find("SO:") : ]
-        if SO_term in renderer.renderer.glyph_term_map.keys():
-            glyph_type = renderer.renderer.glyph_term_map[SO_term]
+        # print(f'SO: {feature.roles[0]}')
+        # SO_term = feature.roles[0][feature.roles[0].find("SO:") : ]
+        # print(f'SO_term = {SO_term}')
 
-            part1 = dpl.Part(part_type= glyph_type , name= feature.name, so_term= feature.roles, orientation= feature.orientation)
-            part1_dict = part1.part_di()
+        # if SO_term in renderer.renderer.glyph_term_map.keys():
+        #     glyph_type = renderer.renderer.glyph_term_map[SO_term]
+
+        #     part1 = dpl.Part(part_type= glyph_type , name= feature.name, so_term= feature.roles, orientation= feature.orientation)
+        #     part1_dict = part1.part_di()
         # print(part1_dict)
 
-            backbone1.append_part(part1_dict)
+            # backbone1.append_part(part1_dict)
     # print(backbone1)
-    backbone_list.append(backbone1)
+    # backbone_list.append(backbone1)
     # backbone_list.append('\n')
     # print("\n\n")
     i += 1
-    if i > 44:
-        break
+    # if i > 44:
+    #     break
 
 
-Bio1 = dpl.BioDesign("First BioDesign")
-# Bio1.add_backbone(backbone_list[42])
-Bio1.add_backbone(backbone_list[42].backbones)
-# Bio1.add_backbone(backbone_list[43].backbones)
-# Bio1.add_backbone(backbone_list[44].backbones)
-print(Bio1)
+# Bio1 = dpl.BioDesign("First BioDesign")
+# # Bio1.add_backbone(backbone_list[42])
+# Bio1.add_backbone(backbone_list[1].backbones)
+# # Bio1.add_backbone(backbone_list[43].backbones)
+# # Bio1.add_backbone(backbone_list[44].backbones)
+# print(Bio1)
 
 # part1 = dpl.Part(part_type=' ', orientation= part_orientation, so_term= part_roles , name= part_name)
 # part1_dict = part1.part_di()
 # print(part1_dict)
 
-draw_dpl = dpl.Renderer().bio_render(Bio1)
+# draw_dpl = dpl.Renderer().bio_render(Bio1)
 
 # backbone1 = dpl.Backbone(name="Backbone 1")
 # backbone1.append_part(part1_dict)
