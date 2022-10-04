@@ -311,7 +311,7 @@ class Renderer:
         self.biodesign = []
         self.part_dict = {}
         self.part_list = []
-        " use this from paraSBOLv glyph_term_map inst"
+
     def bio_render(self, biodesign):
         """
         This function take biodesign as input and plot it using matplotlib
@@ -322,33 +322,27 @@ class Renderer:
         # Generate Matplotlib Figure and Axes
         fig = plt.figure(figsize=(6,6))
         ax = fig.add_axes([0.0, 0.0, 1.0, 1.0], frameon=False, aspect=1)
-        start_point = (10,30)
+        x = 10
+        y = 10
+        start_point = (x, y)
 
         self.biodesign = biodesign
 
-        
-        for b in self.biodesign.backbones:
-            
-            # print(f'Omar check this backbone {type(b)}')
-            # print(f'Omar check this backbone {b}')
+        print(f'biodesign backbones len : {len(self.biodesign.backbones)}')
 
-            # b_list = list(b)
-
-            # print(f'Omar check this backbone {type(b)}')
-            # print(f'Omar check this backbone {b}')
-            
-
-            for part in b:
-                print(f'omar part {part}')
+        for backbone in self.biodesign.backbones:
+            for part in backbone:
+                # print(f'omar part {part}')
                 part['start_point'] = start_point
                 bounds, end_point = self.renderer.draw_glyph(ax, part['part_type'], position=part['start_point'])
                 start_point = end_point
 
-                print(f'bounds = {bounds} \n end_point = {end_point}')
-                # x = x + 20
-                # y = y + 20
-            # y = y + 30
-        
+                # print(f'bounds = {bounds} \n end_point = {end_point}')
+            y = y + 20
+            start_point = (x, y)
+
+            
+                
         # Set Bounds
         ax.set_ylim([0,100])
         ax.set_xlim([0,200])
