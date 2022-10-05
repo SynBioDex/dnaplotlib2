@@ -320,10 +320,11 @@ class Renderer:
         import matplotlib.pyplot as plt
 
         # Generate Matplotlib Figure and Axes
-        fig = plt.figure(figsize=(6,6))
+        fig = plt.figure(figsize=(9,6))
         ax = fig.add_axes([0.0, 0.0, 1.0, 1.0], frameon=False, aspect=1)
-        x = 10
+        x = 20
         y = 10
+        i=1
         start_point = (x, y)
 
         self.biodesign = biodesign
@@ -331,21 +332,24 @@ class Renderer:
         print(f'biodesign backbones len : {len(self.biodesign.backbones)}')
 
         for backbone in self.biodesign.backbones:
+            # print(f'backbone to draw = {backbone}')
             for part in backbone:
-                # print(f'omar part {part}')
                 part['start_point'] = start_point
                 bounds, end_point = self.renderer.draw_glyph(ax, part['part_type'], position=part['start_point'])
                 start_point = end_point
+                print(f'start point in the loop = {start_point}')
 
+                print(i)
+                i = i + 1
                 # print(f'bounds = {bounds} \n end_point = {end_point}')
             y = y + 20
-            start_point = (x, y)
+            # start_point = (x, y)
 
             
-                
+        print(f'start point {start_point[0]}')
         # Set Bounds
         ax.set_ylim([0,100])
-        ax.set_xlim([0,200])
+        ax.set_xlim([0,start_point[0]])
 
         plt.show()
 
