@@ -1,9 +1,71 @@
 import dnaplotlib2 as dpl
 import sbol3
 
-doc = sbol3.Document()
-doc.read("gfp.nt")
 
+### function dfs -Depth First Search- to flatten all components
+'''
+# create document to read sbol file
+doc = sbol3.Document()
+doc.read("pysbol3_files\distribution.nt")
+print(len(doc))
+print(doc)
+
+# print(list(doc))
+# create renderer to draw components
+renderer  = dpl.Renderer()
+
+i = 0
+backbone_list = []
+
+dfs_result = []
+visited = set()
+
+def dfs(node, doc, i):
+    if isinstance(node, sbol3.Component):    # iterate only through component objects
+        
+        visited.add(node)
+        dfs_result.append(node)
+
+
+        # print(type(node), i)
+        i = i + 1
+        
+        if node.features != []:
+            for feature in node.features: 
+                # if type(feature) == str:
+                #     continue
+                if feature not in visited:
+                    dfs(feature, doc, i)
+
+# dfs(doc.objects[0], doc, i) 
+# print(dfs_result)    
+
+# print(doc.objects[3].features)
+for object in doc.objects:
+    if not isinstance(object, sbol3.Component):    # iterate only through component objects
+        continue
+    # print(object._owned_objects)
+    dfs(object, doc, i)
+print(len(dfs_result)) 
+'''
+
+doc = sbol3.Document()
+doc.read("pysbol3_files\distribution.nt")
+print(len(doc))
+print(doc)
+
+# for obj in doc.objects:
+#     if not isinstance(obj, sbol3.Component):
+#         continue
+#     print(obj.display_id)
+#     print(f"Name: {obj.name}, roles: {obj.roles}, types: {obj.types}")
+
+#     for feature in obj.features:
+#         print(f"Name: {feature.display_id}, roles: {feature.roles}")
+#         for sub in feature.features:
+#             print(f"Name: {feature.display_id}, roles: {feature.roles}")
+
+# ...
 # # SO_to_glyph_type = {'0000031': 'Aptamer', 
 #                     '0001953':'Assembly Scar', 
 #                     '0001691':'Blunt Restriction Site', 
@@ -67,36 +129,38 @@ objects_list = []
 backbone_list = []
 glyph_type = ''
 
-for object in doc.objects:
-    # if not isinstance(object, sbol3.Component):
-    #     continue
-    print(object.display_name , i)
-    # objects_list.append(object.display_name)
-    # backbone1 = dpl.Backbone(name=object.display_name)
-    
-    # for feature in object.features:
-    #     print(f"Name: {feature.name}, roles: {feature.roles}, orientation: {feature.orientation}")
-    #     print(object.display_name , i)
+# for object in doc.objects:
+#     # if not isinstance(object, sbol3.Component):
+#     #     continue
+#     print(object.display_name , i)
+#     print(f"Name: {object.name}, roles: {object.roles}")
 
-        # print(f'SO: {feature.roles[0]}')
-        # SO_term = feature.roles[0][feature.roles[0].find("SO:") : ]
-        # print(f'SO_term = {SO_term}')
+#     # objects_list.append(object.display_name)
+#     # backbone1 = dpl.Backbone(name=object.display_name)
+#     print(object.features)
+#     for feature in object.features:
+#         print(f"Name: {feature.name}, roles: {feature.roles}, orientation: {feature.orientation}")
+#     #     print(object.display_name , i)
 
-        # if SO_term in renderer.renderer.glyph_term_map.keys():
-        #     glyph_type = renderer.renderer.glyph_term_map[SO_term]
+#         # print(f'SO: {feature.roles[0]}')
+#         # SO_term = feature.roles[0][feature.roles[0].find("SO:") : ]
+#         # print(f'SO_term = {SO_term}')
 
-        #     part1 = dpl.Part(part_type= glyph_type , name= feature.name, so_term= feature.roles, orientation= feature.orientation)
-        #     part1_dict = part1.part_di()
-        # print(part1_dict)
+#         # if SO_term in renderer.renderer.glyph_term_map.keys():
+#         #     glyph_type = renderer.renderer.glyph_term_map[SO_term]
 
-            # backbone1.append_part(part1_dict)
-    # print(backbone1)
-    # backbone_list.append(backbone1)
-    # backbone_list.append('\n')
-    # print("\n\n")
-    i += 1
-    # if i > 44:
-    #     break
+#         #     part1 = dpl.Part(part_type= glyph_type , name= feature.name, so_term= feature.roles, orientation= feature.orientation)
+#         #     part1_dict = part1.part_di()
+#         # print(part1_dict)
+
+#             # backbone1.append_part(part1_dict)
+#     # print(backbone1)
+#     # backbone_list.append(backbone1)
+#     # backbone_list.append('\n')
+#     # print("\n\n")
+#     i += 1
+#     # if i > 44:
+#     #     break
 
 
 # Bio1 = dpl.BioDesign("First BioDesign")
@@ -111,9 +175,3 @@ for object in doc.objects:
 # print(part1_dict)
 
 # draw_dpl = dpl.Renderer().bio_render(Bio1)
-
-# backbone1 = dpl.Backbone(name="Backbone 1")
-# backbone1.append_part(part1_dict)
-# print(backbone1)
-# print(objects_list,'\n')
-# print(backbone_list)
