@@ -11,5 +11,5 @@ def test_backbone_append():
     part1 = dpl.Part('p','1','123','q')
     backbone1 = dpl.Backbone(name='test1')
     backbone1.append_part(part1.part_li())
-    output = ['test1', [['p','1','123','q']]]
+    output = ['test1', [['p','1','123','q', (0, 0)]]]
     assert backbone1.backbones_list == output
