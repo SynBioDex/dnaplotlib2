@@ -3,7 +3,7 @@ import sbol3
 
 # create document to read sbol file
 doc = sbol3.Document()
-doc.read("pysbol3_files/iGEM-Engineering iGEM-distribution develop Anderson%20Promoters/Anderson Promoters/views/package.nt")
+doc.read("gfp.nt")
 print(len(doc))
 print(doc)
 
@@ -12,6 +12,7 @@ print(doc)
 renderer  = dpl.Renderer()
 backbone1 = dpl.Backbone(name='Omar backbone')
 
+doc.find('https://github.com/iGEM-Engineering/iGEM-distribution/Anderson%20Promoters/pSB1C5')
 i = 0
 backbone_list = []
 
