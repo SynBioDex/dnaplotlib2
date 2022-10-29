@@ -148,6 +148,8 @@ class Part:
         self.name = name
         self.part_list = []
         self.part_dict = {}
+        self.start_point = (0, 0)
+        
 
     def part_li(self):
         """
@@ -170,6 +172,9 @@ class Part:
         self.part_list.append(self.orientation)
         self.part_list.append(self.so_term)
         self.part_list.append(self.name)
+
+        self.part_list.append(self.start_point)
+
         # print(self.part_list)
 
         return self.part_list
@@ -194,6 +199,8 @@ class Part:
         self.part_dict["orientation"] = self.orientation
         self.part_dict["so_term"] = self.so_term
         self.part_dict["name"] = self.name
+
+        self.part_dict['end_point'] = self.start_point
         # print(self.part_dict)
 
         return self.part_dict
@@ -305,7 +312,6 @@ class Renderer:
         self.part_dict = {}
         self.part_list = []
 
-
     def bio_render(self, biodesign):
         """
         This function take biodesign as input and plot it using matplotlib
@@ -314,24 +320,36 @@ class Renderer:
         import matplotlib.pyplot as plt
 
         # Generate Matplotlib Figure and Axes
-        fig = plt.figure(figsize=(6,6))
+        fig = plt.figure(figsize=(9,6))
         ax = fig.add_axes([0.0, 0.0, 1.0, 1.0], frameon=False, aspect=1)
+        x = 20
+        y = 10
+        i=1
+        start_point = (x, y)
 
         self.biodesign = biodesign
-        
-        y = 50
-        for b in self.biodesign.backbones:
-            x = 10
-            for part in b:
-                
-                bounds, end_point = self.renderer.draw_glyph(ax, part['part_type'], (x, y))
-                x = x + 20
-                # y = y + 20
-            y = y + 30
-        
+
+        print(f'biodesign backbones len : {len(self.biodesign.backbones)}')
+
+        for backbone in self.biodesign.backbones:
+            # print(f'backbone to draw = {backbone}')
+            for part in backbone:
+                part['start_point'] = start_point
+                bounds, end_point = self.renderer.draw_glyph(ax, part['part_type'], position=part['start_point'])
+                start_point = end_point
+                print(f'start point in the loop = {start_point}')
+
+                print(i)
+                i = i + 1
+                # print(f'bounds = {bounds} \n end_point = {end_point}')
+            y = y + 20
+            # start_point = (x, y)
+
+            
+        print(f'start point {start_point[0]}')
         # Set Bounds
         ax.set_ylim([0,100])
-        ax.set_xlim([0,200])
+        ax.set_xlim([0,start_point[0]])
 
         plt.show()
 
@@ -383,6 +401,9 @@ class Renderer:
             print('part_dict - > ',self.part_dict)
             print('interaction_list -> ',interaction_list)
             print('self.interaction_dict - >  ', self.interaction_dict)
+
+
+        # todo- create a loop to draw a list of backbones
 
         construct = psv.Construct(self.part_dict[0], self.renderer, interaction_list=self.interaction_dict[0]) 
         
