@@ -1,0 +1,121 @@
+<https://synbiohub.org/public/igem/GFP1> <http://sbols.org/v3#displayId> "GFP1" .
+<https://synbiohub.org/public/igem/GFP1> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/GFP1> <http://sbols.org/v3#name> "GFP (Omar)" .
+<https://synbiohub.org/public/igem/GFP1> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000316> .
+<https://synbiohub.org/public/igem/GFP1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/GFP1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/GFP2> <http://sbols.org/v3#displayId> "GFP2" .
+<https://synbiohub.org/public/igem/GFP2> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/GFP2> <http://sbols.org/v3#name> "GFP (Omar2)" .
+<https://synbiohub.org/public/igem/GFP2> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000316> .
+<https://synbiohub.org/public/igem/GFP2> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/GFP2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/I13504/SequenceFeature1/Range1> <http://sbols.org/v3#displayId> "Range1" .
+<https://synbiohub.org/public/igem/I13504/SequenceFeature1/Range1> <http://sbols.org/v3#end> "70"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://synbiohub.org/public/igem/I13504/SequenceFeature1/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/I13504_sequence> .
+<https://synbiohub.org/public/igem/I13504/SequenceFeature1/Range1> <http://sbols.org/v3#start> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://synbiohub.org/public/igem/I13504/SequenceFeature1/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
+<https://synbiohub.org/public/igem/I13504/SequenceFeature1> <http://sbols.org/v3#displayId> "SequenceFeature1" .
+<https://synbiohub.org/public/igem/I13504/SequenceFeature1> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/I13504/SequenceFeature1/Range1> .
+<https://synbiohub.org/public/igem/I13504/SequenceFeature1> <http://sbols.org/v3#role> <https://identifiers.org/SO:0001953> .
+<https://synbiohub.org/public/igem/I13504/SequenceFeature1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SequenceFeature> .
+<https://synbiohub.org/public/igem/I13504/SubComponent1> <http://sbols.org/v3#displayId> "SubComponent1" .
+<https://synbiohub.org/public/igem/I13504/SubComponent1> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/Promotor1> .
+<https://synbiohub.org/public/igem/I13504/SubComponent1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
+<https://synbiohub.org/public/igem/I13504/SubComponent2> <http://sbols.org/v3#displayId> "SubComponent2" .
+<https://synbiohub.org/public/igem/I13504/SubComponent2> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/RBS1> .
+<https://synbiohub.org/public/igem/I13504/SubComponent2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
+<https://synbiohub.org/public/igem/I13504/SubComponent3> <http://sbols.org/v3#displayId> "SubComponent3" .
+<https://synbiohub.org/public/igem/I13504/SubComponent3> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/GFP1> .
+<https://synbiohub.org/public/igem/I13504/SubComponent3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
+<https://synbiohub.org/public/igem/I13504/SubComponent4> <http://sbols.org/v3#displayId> "SubComponent4" .
+<https://synbiohub.org/public/igem/I13504/SubComponent4> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/Term1> .
+<https://synbiohub.org/public/igem/I13504/SubComponent4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#description> "GFP expression cassette used for 2016 iGEM interlab" .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#displayId> "I13504" .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/I13504/SequenceFeature1> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/I13504/SubComponent1> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/I13504/SubComponent2> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/I13504/SubComponent3> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/I13504/SubComponent4> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/I13504_sequence> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#name> "iGEM 2016 interlab reporter" .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000804> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/I13504> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/Molecule> <http://sbols.org/v3#displayId> "Molecule" .
+<https://synbiohub.org/public/igem/Molecule> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/Molecule> <http://sbols.org/v3#name> "Single Strand Nucleic Acid (Omar)" .
+<https://synbiohub.org/public/igem/Molecule> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000250> .
+<https://synbiohub.org/public/igem/Molecule> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000250> .
+<https://synbiohub.org/public/igem/Molecule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/Promotor1> <http://sbols.org/v3#displayId> "Promotor1" .
+<https://synbiohub.org/public/igem/Promotor1> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/Promotor1> <http://sbols.org/v3#name> "Promotor (Omar)" .
+<https://synbiohub.org/public/igem/Promotor1> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000167> .
+<https://synbiohub.org/public/igem/Promotor1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/Promotor1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/Promotor2> <http://sbols.org/v3#displayId> "Promotor2" .
+<https://synbiohub.org/public/igem/Promotor2> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/Promotor2> <http://sbols.org/v3#name> "Promotor (Omar2)" .
+<https://synbiohub.org/public/igem/Promotor2> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000167> .
+<https://synbiohub.org/public/igem/Promotor2> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/Promotor2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/RBS1> <http://sbols.org/v3#displayId> "RBS1" .
+<https://synbiohub.org/public/igem/RBS1> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/RBS1> <http://sbols.org/v3#name> "RBS (Omar)" .
+<https://synbiohub.org/public/igem/RBS1> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000139> .
+<https://synbiohub.org/public/igem/RBS1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/RBS1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/RBS2> <http://sbols.org/v3#displayId> "RBS2" .
+<https://synbiohub.org/public/igem/RBS2> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/RBS2> <http://sbols.org/v3#name> "RBS (Omar2)" .
+<https://synbiohub.org/public/igem/RBS2> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000139> .
+<https://synbiohub.org/public/igem/RBS2> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/RBS2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/Term1> <http://sbols.org/v3#displayId> "Term1" .
+<https://synbiohub.org/public/igem/Term1> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/Term1> <http://sbols.org/v3#name> "double terminator (Omar)" .
+<https://synbiohub.org/public/igem/Term1> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000141> .
+<https://synbiohub.org/public/igem/Term1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/Term1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/Term2> <http://sbols.org/v3#displayId> "Term2" .
+<https://synbiohub.org/public/igem/Term2> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/Term2> <http://sbols.org/v3#name> "double terminator (Omar2)" .
+<https://synbiohub.org/public/igem/Term2> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000141> .
+<https://synbiohub.org/public/igem/Term2> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/Term2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/op1> <http://sbols.org/v3#displayId> "op1" .
+<https://synbiohub.org/public/igem/op1> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/op1> <http://sbols.org/v3#name> "Operator (Omar2)" .
+<https://synbiohub.org/public/igem/op1> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000057> .
+<https://synbiohub.org/public/igem/op1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/op1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/sec_back/SubComponent1> <http://sbols.org/v3#displayId> "SubComponent1" .
+<https://synbiohub.org/public/igem/sec_back/SubComponent1> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/Promotor2> .
+<https://synbiohub.org/public/igem/sec_back/SubComponent1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
+<https://synbiohub.org/public/igem/sec_back/SubComponent2> <http://sbols.org/v3#displayId> "SubComponent2" .
+<https://synbiohub.org/public/igem/sec_back/SubComponent2> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/op1> .
+<https://synbiohub.org/public/igem/sec_back/SubComponent2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
+<https://synbiohub.org/public/igem/sec_back/SubComponent3> <http://sbols.org/v3#displayId> "SubComponent3" .
+<https://synbiohub.org/public/igem/sec_back/SubComponent3> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/RBS2> .
+<https://synbiohub.org/public/igem/sec_back/SubComponent3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
+<https://synbiohub.org/public/igem/sec_back/SubComponent4> <http://sbols.org/v3#displayId> "SubComponent4" .
+<https://synbiohub.org/public/igem/sec_back/SubComponent4> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/GFP2> .
+<https://synbiohub.org/public/igem/sec_back/SubComponent4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
+<https://synbiohub.org/public/igem/sec_back/SubComponent5> <http://sbols.org/v3#displayId> "SubComponent5" .
+<https://synbiohub.org/public/igem/sec_back/SubComponent5> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/Term2> .
+<https://synbiohub.org/public/igem/sec_back/SubComponent5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#description> "GFP expression cassette used for 2016 iGEM interlab" .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#displayId> "sec_back" .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/sec_back/SubComponent1> .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/sec_back/SubComponent2> .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/sec_back/SubComponent3> .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/sec_back/SubComponent4> .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/sec_back/SubComponent5> .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#name> "iGEM 2016 interlab reporter" .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000804> .
+<https://synbiohub.org/public/igem/sec_back> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/sec_back> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
