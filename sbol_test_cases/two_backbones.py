@@ -111,29 +111,29 @@ print(f'Added Terminator SubComponent {term2.identity}')
 #-----------------------------------------------------------------
 
 
-### Adding sequance range to components
-seq_13504 = ('aaagaggagaaatactagatgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaat'
-             'tagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaa'
-             'acttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttc'
-             'ggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgcca'
-             'tgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctga'
-             'agtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatgga'
-             'aacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaa'
-             'agaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagacca'
-             'ttatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaa'
-             'tctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctg'
-             'ggattacacatggcatggatgaactatacaaataataatactagagccaggcatcaaataaaacgaaagg')
+# ### Adding sequance range to components
+# seq_13504 = ('aaagaggagaaatactagatgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaat'
+#              'tagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaa'
+#              'acttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttc'
+#              'ggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgcca'
+#              'tgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctga'
+#              'agtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatgga'
+#              'aacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaa'
+#              'agaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagacca'
+#              'ttatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaa'
+#              'tctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctg'
+#              'ggattacacatggcatggatgaactatacaaataataatactagagccaggcatcaaataaaacgaaagg')
 
-i13504_seq = sbol3.Sequence('I13504_sequence')
-i13504_seq.elements = seq_13504
-i13504_seq.encoding = sbol3.IUPAC_DNA_ENCODING
-i13504.sequences.append(i13504_seq)
+# i13504_seq = sbol3.Sequence('I13504_sequence')
+# i13504_seq.elements = seq_13504
+# i13504_seq.encoding = sbol3.IUPAC_DNA_ENCODING
+# i13504.sequences.append(i13504_seq)
 
 
-loc = sbol3.Range(i13504_seq, 0, 70)
-i13504_seq_feat = sbol3.SequenceFeature([loc])
-i13504_seq_feat.roles = [SO_ASSEMBLY_SCAR]
-i13504.features.append(i13504_seq_feat)
+# loc = sbol3.Range(i13504_seq, 0, 70)
+# i13504_seq_feat = sbol3.SequenceFeature([loc])
+# i13504_seq_feat.roles = [SO_ASSEMBLY_SCAR]
+# i13504.features.append(i13504_seq_feat)
 
 
 # --------------------------------------------------
