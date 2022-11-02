@@ -37,19 +37,19 @@ Class for Rendering:
 
 ## Examples
 - draw manually created backbones
-<br>![two constructs](images\two_construct.png)
+<br>![two constructs](images/two_construct.png)
 
 - draw manually created interactions between every backbone parts
-<br>![two constructs and interactions](images\draw_interaction_between_every_backbone_parts.png)
+<br>![two constructs and interactions](images/draw_interaction_between_every_backbone_parts.png)
 
 - draw specific component inside sbol3 file
-<br>![component from sbol3 file](images\draw_specific_component_from_sbol3.png)
+<br>![component from sbol3 file](images/draw_specific_component_from_sbol3.png)
 
 - draw sbol3 backbones and molecular species
-<br>![two backbones and molecular species from sbol3 file](images\two_backbones_and_molecular_from_SBOL3.png)
+<br>![two backbones and molecular species from sbol3 file](images/two_backbones_and_molecular_from_SBOL3.png)
 
 - draw backbones with sort manually
-<br>![two backbones with sort manually](images\two_backbones_with_sort_manully.png)
+<br>![two backbones with sort manually](images/two_backbones_with_sort_manully.png)
 
 
 
