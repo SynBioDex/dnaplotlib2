@@ -144,7 +144,7 @@ class Part:
     class to create a new part with all components of it
     """
 
-    def __init__(self, part_type, orientation, so_term, name, start_range = None , end_range = None):
+    def __init__(self, part_type, orientation, so_term, name, start_range = -1 , end_range = None):
         self.part_type = part_type
         self.orientation = orientation
         self.so_term = so_term
