@@ -3,8 +3,7 @@ import sbol3
 
 # create document to read sbol file
 docu = sbol3.Document()
-docu.read("gfp.nt")
-# print(f"doc lenght -> {docu.objects[1].features.display_id}")
+docu.read("sbol_test_cases\\sbol_files\\two_backbones_and_molecule_case.nt")
 
 # create renderer to draw components
 renderer  = dpl.Renderer()

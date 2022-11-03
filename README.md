@@ -22,9 +22,9 @@ Class for Rendering:
 - Class Renderer:    class to render biological glyphs and plot them into matplotlib figure using parasbolv library
 
 ## Dependencies
-- [pySBOL3 library](https://github.com/SynBioDex/pySBOL3)
-- [paraSBOLv library](https://github.com/BiocomputeLab/paraSBOLv)
-- matplotlib library
+- [pySBOL3 library](https://github.com/SynBioDex/pySBOL3): Reading sbol3 files
+- [paraSBOLv library](https://github.com/BiocomputeLab/paraSBOLv): Rendering sbol glyphs
+- matplotlib library: Visualize the rendered glyphs on a graph
 
 ## Library features
 - create a biodesgin manually and draw it
