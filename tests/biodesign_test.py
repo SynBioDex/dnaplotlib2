@@ -4,7 +4,8 @@ test case for biodesign
 
 import dnaplotlib2 as dpl
 
-def test_biodesign_add_backbone():
+def test_biodesign_add_backbone
+():
     '''
     funtion to test return of biodesign and make sure every element have been added
     '''
