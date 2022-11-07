@@ -8,4 +8,4 @@ from .dnaplotlib2 import *
 # """
 # paraSBOLv
 # """
-# from .parasbolv import *
+from .parasbolv import *
