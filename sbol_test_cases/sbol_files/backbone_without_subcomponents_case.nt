@@ -1,0 +1,31 @@
+<https://synbiohub.org/public/igem/GFP> <http://sbols.org/v3#displayId> "GFP" .
+<https://synbiohub.org/public/igem/GFP> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/GFP> <http://sbols.org/v3#name> "GFP (Omar)" .
+<https://synbiohub.org/public/igem/GFP> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000316> .
+<https://synbiohub.org/public/igem/GFP> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/GFP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#description> "GFP expression cassette used for 2016 iGEM interlab" .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#displayId> "I13504" .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#name> "iGEM 2016 interlab reporter" .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000804> .
+<https://synbiohub.org/public/igem/I13504> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/I13504> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/Promotor> <http://sbols.org/v3#displayId> "Promotor" .
+<https://synbiohub.org/public/igem/Promotor> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/Promotor> <http://sbols.org/v3#name> "Promotor (Omar)" .
+<https://synbiohub.org/public/igem/Promotor> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000167> .
+<https://synbiohub.org/public/igem/Promotor> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/Promotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/RBS> <http://sbols.org/v3#displayId> "RBS" .
+<https://synbiohub.org/public/igem/RBS> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/RBS> <http://sbols.org/v3#name> "RBS (Omar)" .
+<https://synbiohub.org/public/igem/RBS> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000139> .
+<https://synbiohub.org/public/igem/RBS> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/RBS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+<https://synbiohub.org/public/igem/Term> <http://sbols.org/v3#displayId> "Term" .
+<https://synbiohub.org/public/igem/Term> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem/> .
+<https://synbiohub.org/public/igem/Term> <http://sbols.org/v3#name> "double terminator (Omar)" .
+<https://synbiohub.org/public/igem/Term> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000141> .
+<https://synbiohub.org/public/igem/Term> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000251> .
+<https://synbiohub.org/public/igem/Term> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
