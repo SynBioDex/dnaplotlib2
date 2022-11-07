@@ -327,7 +327,7 @@ class Renderer:
         if isinstance(self.node, sbol3.Component):    
             
             self.visited.add(self.node)
-
+            # print(f"node display id ->>> {self.node.display_id}, roles ->> {self.node.roles}, instance of ->> {self.node.instance_of}")
             # if object doesn't contain subcomponents features, get its attributes
             if self.node.features == []:    
 
@@ -360,7 +360,7 @@ class Renderer:
 
             # get attributes of subcomponents
             for feature in self.node.features:
-                print(f"Name: {feature.display_id}, roles: {feature.roles}, instance of: ") #{feature.instance_of} {feature.locations.property_owner}
+                print(f"Name: {feature.display_id}, roles: {feature.roles}, instance of:{feature.instance_of} ") #{feature.instance_of} {feature.locations.property_owner}
                 
                 # skip features that don't have SO_term
                 if feature.roles == []:            
@@ -395,10 +395,7 @@ class Renderer:
         mol_pos = (50,50)
         self.biodesign = biodesign
         
-        # print(f'biodesign backbones len : {len(self.biodesign.backbones)}')
-
         ## draw molecular species
-        # print(f"self.biodesgin.molecular_species {self.biodesign.molecular_species}")
         if len(self.biodesign.molecular_species) != 0:
             for mol in self.biodesign.molecular_species:
                 bound, end_point = self.renderer.draw_glyph(ax, mol['molecular_species_type'], position=mol_pos)
