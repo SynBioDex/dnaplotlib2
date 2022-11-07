@@ -34,24 +34,12 @@ class BioDesign:
         """
         self.backbones.append(backbones)
 
-    def print_backbone(self):
-        """
-        function to print to a list of available backbones
-        """
-        print(self.backbones)
-
-
     def add_moleculer(self, moleculer):
         """
         function to add new molecule to the biodesign
         """
         self.molecular_species = moleculer
 
-    def print_moleculer(self):
-        """
-        function to print all melocules added to the biodesign
-        """
-        print(self.molecular_species)
 
     
     def add_interaction_node(self, node):
@@ -60,25 +48,12 @@ class BioDesign:
         """
         self.interaction_node.append(node)
 
-    def print_node(self):
-        """
-        funciton to print available list of interaction nodes
-        """
-        print(self.interaction_node)
-
 
     def add_interaction(self, interaction):
         """
         function to append new interaction to the biodesign
         """
         self.interaction.append(interaction)
-
-    def print_interaction(self):
-        """
-        function to print a list of available interactions
-        """
-        print(self.interaction)
-
    
     def show_biodesign(self):
         '''
@@ -92,7 +67,6 @@ class BioDesign:
         self.interaction,
     ]
         
-
     def print_biodesign(self):
         """
         function to print all biodesign components
@@ -121,7 +95,6 @@ class Backbone:
     def __repr__(self):
         """return a string representation of the object"""
         self.backbones_list = [self.name, self.backbones]
-        # return f'(Backbone object contains {self.backbone_list})'
         return f"{self.backbones_list}"
 
 
@@ -132,29 +105,22 @@ class Backbone:
         self.backbones.append(part)
         self.backbones_list.append(self.backbones)
 
-    
-    def print_backbone(self):
-        """
-        function to print current backbone parts
-        """
-        print(self.backbones)
-
 
 class Part:
     """
     class to create a new part with all components of it
     """
 
-    def __init__(self, part_type, orientation, so_term, name, start_range = -1 , end_range = None):
+    def __init__(self, part_type, orientation, so_term, name, start_seq_range = -1 , end_seq_range = None, start_point= (0,0)):
         self.part_type = part_type
         self.orientation = orientation
         self.so_term = so_term
         self.name = name
         self.part_list = []
         self.part_dict = {}
-        self.start_point = (0, 0)
-        self.start_range = start_range
-        self.end_range = end_range
+        self.start_point = start_point
+        self.start_range = start_seq_range
+        self.end_range = end_seq_range
         
 
     def part_li(self):
@@ -208,10 +174,9 @@ class Part:
         self.part_dict["so_term"] = self.so_term
         self.part_dict["name"] = self.name
 
-        self.part_dict['end_point'] = self.start_point
-        self.part_dict['start_range'] = self.start_range
-        self.part_dict['end_range'] = self.end_range
-        # print(self.part_dict)
+        self.part_dict["start_point"] = self.start_point
+        self.part_dict["start_seq_range"] = self.start_range
+        self.part_dict["end_seq_range"] = self.end_range
 
         return self.part_dict
 
@@ -441,7 +406,7 @@ class Renderer:
 
         # we will sort parts according to range start position on seq
         for i in range(0, len(self.biodesign.backbones)):
-            self.biodesign.backbones[i] = sorted(self.biodesign.backbones[i], key=lambda k: k['start_range']) 
+            self.biodesign.backbones[i] = sorted(self.biodesign.backbones[i], key=lambda k: k['start_seq_range']) 
             # print(f"sorted backbone -> {self.biodesign.backbones[i]}")
 
         ### draw parts of different backbones
