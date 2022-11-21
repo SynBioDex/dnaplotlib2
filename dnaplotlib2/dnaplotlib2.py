@@ -327,7 +327,7 @@ class Renderer:
         if isinstance(self.node, sbol3.Component):    
             
             self.visited.add(self.node)
-
+            # print(f"node display id ->>> {self.node.display_id}, roles ->> {self.node.roles}, instance of ->> {self.node.instance_of}")
             # if object doesn't contain subcomponents features, get its attributes
             if self.node.features == []:    
 
@@ -395,10 +395,7 @@ class Renderer:
         mol_pos = (50,50)
         self.biodesign = biodesign
         
-        # print(f'biodesign backbones len : {len(self.biodesign.backbones)}')
-
         ## draw molecular species
-        # print(f"self.biodesgin.molecular_species {self.biodesign.molecular_species}")
         if len(self.biodesign.molecular_species) != 0:
             for mol in self.biodesign.molecular_species:
                 bound, end_point = self.renderer.draw_glyph(ax, mol['molecular_species_type'], position=mol_pos)
@@ -426,70 +423,4 @@ class Renderer:
 
         plt.show()
 
-    # def draw_construct(self, biodesign, part_list=[]):
-    #     import parasbolv as psv
-    #     import matplotlib.pyplot as plt
-
-    #     # Draw construct
-    #     self.biodesign = biodesign
-    #     self.part_list = part_list
-
-    #     i = 0
-
-    #     for b in self.biodesign.backbones:
-
-    #         for part in b:
-    #             self.part_list.append(list(part.values()))
-
-    #         self.part_dict[i] = self.part_list
-    #         i = i + 1
-            
-    #         # print(self.part_list)
-    #         self.part_list = []
-    #         # print(self.part_list)
-
-    #     # from collections import namedtuple
-    #     self.interaction_dict = {}
-    #     interaction_list = []
-    #     # interaction = namedtuple('interaction', ['starting_glyph', 'ending_glyph', 'interaction_type', 'interaction_parameters'])
-
-    #     i = 0
-
-    #     for interaction in self.biodesign.interaction:
-    #         print('part_dict - > ',self.part_dict)
-    #         print('interaction - >', interaction)
-
-
-    #         interaction['start_object'] = list(interaction['start_object'].values())
-    #         interaction['end_object'] = list(interaction['end_object'].values())
-
-    #         # interaction[]
-    #         interaction_list.append([interaction['start_object'], interaction['end_object'], interaction['interaction_type'],
-    #          {'color': (0.75,0,0)}])
-    #         # interaction_list.append(interaction(part_list[2], part_list[4], 'control', {'color': (0, 0.75, 0),
-    #         #                                                                 'direction':'reverse'}))
-    #         self.interaction_dict[i] = interaction_list
-    #         i = i + 1
-    #         interaction_list = []
-    #         print('part_dict - > ',self.part_dict)
-    #         print('interaction_list -> ',interaction_list)
-    #         print('self.interaction_dict - >  ', self.interaction_dict)
-
-
-    #     # todo- create a loop to draw a list of backbones
-
-    #     construct = psv.Construct(self.part_dict[0], self.renderer, interaction_list=self.interaction_dict[0]) 
-        
-    #     fig, ax, baseline_start, baseline_end, bounds = construct.draw()
-    #     ax.plot([baseline_start[0], baseline_end[0]], [baseline_start[1], baseline_end[1]], color=(0,0,0), linewidth=1.5, zorder=0)
-
-    #     construct2 = psv.Construct(self.part_dict[1], self.renderer, interaction_list=self.interaction_dict[1], 
-    #                                 fig=fig, ax=ax, start_position=(0,60), additional_bounds_list=[bounds])
-    #     construct2.update_bounds()
-    #     fig, ax, baseline_start, baseline_end, bounds = construct2.draw()
-    #     ax.plot([baseline_start[0], baseline_end[0]], [baseline_start[1], baseline_end[1]], color=(0,0,0), linewidth=1.5, zorder=0)
-
-    #     plt.show()
-
-
-    #     # def draw_construct(self, biodesign, part_list):
+    
